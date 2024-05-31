@@ -18,13 +18,15 @@ typedef unsigned int size_t;
 #define nullptr (void*)0
 
 #define GAME_WIDTH 1000
-#define GAME_HEIGHT 10000
+#define GAME_HEIGHT 1000
 
-#define RENDER_WIDTH 200
-#define RENDER_HEIGHT 200
+#define RENDER_WIDTH 800
+#define RENDER_HEIGHT 800
 
 #define GAME_COORD( x, y ) ((x)+(y)*GAME_WIDTH)
 #define RENDER_COORD( x, y ) ((x)+(y)*RENDER_WIDTH)
+
+#define MOD( a, b ) (((((a)%(b))+(b))%(b)))
 
 extern void set_render_data(void* image, uint32_t width, uint32_t height);
 
